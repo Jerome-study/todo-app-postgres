@@ -18,8 +18,9 @@ router.post("/addTodo", async (req,res) => {
     if (!title) return res.send({ message: "Do not leave it blank!"});
     const user_id = req.user;
     try {
-        const result = await pool.query(queries.addTodo(title, user_id));
-        res.send(result.rows);
+        await pool.query(queries.addTodo(title, user_id));
+        const updated_todos = await pool.query(`${queries.getTodos(user_id)}`)
+        res.send(updated_todos.rows);
     } catch(error) {
         console.log(error.message);
     }
@@ -31,8 +32,9 @@ router.put("/updateTodo/:todo_id", async (req,res) => {
     const { todo_id } = req.params;
     const user_id = req.user;
     try {
-        const result = await pool.query(queries.updateTodo(todo_id, edited_title, user_id));
-        res.send(result.rows);
+        await pool.query(queries.updateTodo(todo_id, edited_title, user_id));
+        const updated_todos = await pool.query(`${queries.getTodos(user_id)}`)
+        res.send(updated_todos.rows);
     } catch(error) {
         console.log(error.message);
     }
@@ -42,8 +44,9 @@ router.delete("/deleteTodo/:todo_id", async (req,res) => {
     const { todo_id } = req.params;
     const user_id = req.user;
     try {
-        const result = await pool.query(queries.deleteTodo(todo_id, user_id));
-        res.send(result.rows);
+        await pool.query(queries.deleteTodo(todo_id, user_id));
+        const updated_todos = await pool.query(`${queries.getTodos(user_id)}`)
+        res.send(updated_todos.rows);
     } catch(error) {
         console.log(error.message);
     }
