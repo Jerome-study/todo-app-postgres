@@ -1,6 +1,7 @@
 import { useFetch } from "../../hooks/useFetch";
 import { memo } from "react";
 import { ListContainer } from "./ListContainer";
+import { RedirectLoading } from "../../loading/Redirect";
 
 
 const UserHomeComponent = () => {
@@ -10,9 +11,7 @@ const UserHomeComponent = () => {
         return <h1 className="text-white">Something Went Wrong</h1>
     }
 
-    if (loading) {
-        return <h1 className="text-white font-black">Loading....</h1>
-    }
+    if (loading) return <RedirectLoading />
     
     return(
         <>

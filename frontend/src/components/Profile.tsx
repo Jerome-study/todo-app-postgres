@@ -1,12 +1,11 @@
 import { useFetch } from "../hooks/useFetch"
+import { RedirectLoading } from "../loading/Redirect";
 
 export const ProfileComponent = () => {
     const { data, loading, error } = useFetch("/api/getUser");
 
     if (error) return <h1>Something went wrong</h1>
-    if (loading) {
-        return <h1 className="text-white font-black">Loading....</h1>
-    }
+    if (loading) return <RedirectLoading />
 
     return(
         <div className="lg:max-w-screen-xl lg:mx-auto lg:px-5">

@@ -1,13 +1,14 @@
 import { useFetch } from "../../hooks/useFetch";
 import { Layout } from "./Layout";
 import { Navigate } from "react-router-dom";
+import { RedirectLoading } from "../../loading/Redirect";
 
 export const Protected = () => {
     const { data, loading, error } = useFetch("/isLoggedIn");
     
     
     if (error) return <h1>Something went wrong</h1>
-    if (loading) return <div className="w-full h-screen bg-slate-900"></div>
+    if (loading) return <RedirectLoading />
 
     return(
         <>

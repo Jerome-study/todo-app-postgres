@@ -4,6 +4,7 @@ import { instance } from "../../utils/utils";
 import { List } from "./List";
 import { toast } from "react-toastify";
 import { TodoList } from "../../models/definition";
+import { ListLoading } from "../../loading/ListLoading";
 
 export const ListContainer = () => {
     const { data, loading, error, refetch } = useFetch("/api/getTodos");
@@ -35,29 +36,30 @@ export const ListContainer = () => {
                     <button disabled={loading} onClick={addTodo} className="text-white w-full font-black bg-rose-800 hover:bg-rose-700 w-full rounded-lg p-3">Add</button>
                 </div>
             </div>
-                {!loading &&
-                    <div className="pb-12">
-                        <div className={`mt-8 pb-3 grid gap-7 ${viewAll? "max-h-full" : "max-h-96"} overflow-auto`}>
-                            {!data?.length ? 
-                                <p className="text-center text-slate-600 font-black">No list 😔</p>
-                            :
-                                data.map((todo : TodoList) => {
-                                    return(
-                                        <List key={todo?.id} todo={todo} refetch={refetch}/>
-                                    )
-                                })
-                            }
-                            
-                        </div>
-                        {data?.length >=5 ? 
-                            <div className={`rounded-lg text-center text-white w-full ${viewAll && "mb-15 lg:mb-0"}`} onClick={() => setViewAll(prev => !prev)}>
-                                <h1 className="text-white font-black bg-slate-900 py-1 rounded-xl">{viewAll? "Shrink" : "View All"}</h1>
-                            </div> 
-                            : 
-                            null
+            {loading && <ListLoading />}
+            {!loading &&
+                <div className="pb-12">
+                    <div className={`mt-8 pb-3 grid gap-7 ${viewAll? "max-h-full" : "max-h-96"} overflow-auto`}>
+                        {!data?.length ? 
+                            <p className="text-center text-slate-600 font-black">No list 😔</p>
+                        :
+                             data.map((todo : TodoList) => {
+                                return(
+                                    <List key={todo?.id} todo={todo} refetch={refetch}/>
+                                )
+                            })
                         }
+                            
                     </div>
-                }
-            </>
+                    {data?.length >=5 ? 
+                        <div className={`rounded-lg text-center text-white w-full ${viewAll && "mb-15 lg:mb-0"}`} onClick={() => setViewAll(prev => !prev)}>
+                            <h1 className="text-white font-black bg-slate-900 py-1 rounded-xl">{viewAll? "Shrink" : "View All"}</h1>
+                        </div> 
+                        : 
+                         null
+                    }
+                </div>
+            }
+        </>
     )
 }
