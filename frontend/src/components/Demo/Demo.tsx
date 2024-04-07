@@ -1,9 +1,10 @@
 import { useCallback, useState } from "react";
 import { toast } from "react-toastify";
 import  List  from "./List";
+import { TodoList } from "../../models/definition";
 
 export const DemoComponent = () => {
-    const [todos, setTodos] = useState<any>([]);
+    const [todos, setTodos] = useState<Array<TodoList>>([]);
     const [title, setTitle] = useState<string>("");
     
     const addTodo = () => {
@@ -51,7 +52,7 @@ export const DemoComponent = () => {
                         {!todos.length && 
                             <p className="text-center text-gray text-zinc-400">List is Empty</p>
                         }
-                        {todos.map((todos: any, index : number) => {
+                        {todos.map((todos: TodoList, index : number) => {
                             return(
                                 <List key={index} data={todos} deleteTodo={deleteTodo} />
                             )

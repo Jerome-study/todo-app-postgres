@@ -7,7 +7,7 @@ export const HomeComponent = () => {
                 <div>
                     <h1 className="text-slate-200 text-6xl md:text-7xl lg:text-8xl font-black text-center">Todo App</h1>
                     <div className="mt-5 lg:mt-8 grid lg:grid-cols-2 gap-3 w-50">
-                        <Link to="/signIn">
+                        <Link to="/signin">
                             <button className="text-black text-2xl bg-amber-100 w-full p-3 font-black rounded-lg hover:bg-amber-50">
                                 Sign In
                             </button>

@@ -14,6 +14,10 @@ CREATE TABLE IF NOT EXISTS todos(
   FOREIGN KEY (user_id) REFERENCES "user"(id)
 );
 `
+const getUser = (id) => {
+  return `SELECT username, created_at FROM "user" WHERE id = '${id}'`
+};
+
 const getTodos = (id) => {
   return `SELECT * FROM todos WHERE user_id = '${id}' ORDER BY created_At`
 };
@@ -30,4 +34,12 @@ const deleteTodo = (todo_id, user_id) => {
   return `DELETE FROM todos WHERE id = '${todo_id}' AND user_id = '${user_id}'`
 };
 
-module.exports = { createUserTable, createTodsTable, getTodos, addTodo, updateTodo, deleteTodo };
+const deleteAllUserTodos = (user_id) => {
+  return `DELETE FROM todos WHERE user_id = '${user_id}'`
+}
+
+const deleteUser = (id) => {
+  return `DELETE FROM "user" WHERE id = '${id}'`
+}
+
+module.exports = { createUserTable, createTodsTable, getTodos, addTodo, updateTodo, deleteTodo, getUser, deleteAllUserTodos, deleteUser };
