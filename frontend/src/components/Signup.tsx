@@ -13,8 +13,10 @@ export const SignUpComponent = () => {
         setLoading(true)
         try {
             const response = await instance.post("/auth/register", {...data});
+            console.log(response)
             if (response.statusText === "OK") return navigate("/signin", { state: true });
         } catch(error : any) {
+            console.log(error)
             notify(error?.response.data.message);
         } finally {
             setLoading(false)
