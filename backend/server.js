@@ -24,7 +24,8 @@ app.use(cors({
 const cookieConfig = {
     maxAge: 1000 * 60 * 60 * 24,
     secure: false,
-    sameSite: "none"
+    sameSite: "none",
+    httpOnly:true
 }
 
 if (process.env.NODE_ENV == "production") {
