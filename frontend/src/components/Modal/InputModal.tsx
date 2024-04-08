@@ -1,4 +1,5 @@
-export const InputModal = ({ action, value, setState, handleClick, loading, setEditedTitle } : any) => {
+import { InputModalInterface } from "../../models/definition"
+export const InputModal = ({ action, value, setState, handleClick, loading, setEditedTitle } : InputModalInterface) => {
     return(
         <>
             <div className="backdrop-brightness-50 h-screen absolute inset-0 flex items-center justify-center">
@@ -14,7 +15,7 @@ export const InputModal = ({ action, value, setState, handleClick, loading, setE
                            <h1 className="text-white font-black text-2xl">{action}</h1>
                             <input type="text" value={value} onChange={(e) => setEditedTitle(e.target.value)} className="rounded-xl py-3 px-2 w-full" />
                            <div className="grid gap-4">
-                                <button className="w-full bg-amber-100 hover:bg-amber-200 rounded-xl py-3 font-black" disabled={loading} onClick={handleClick}>Update</button>
+                                <button className="w-full bg-amber-100 hover:bg-amber-200 rounded-xl py-3 font-black" disabled={loading} onClick={() => handleClick()}>Update</button>
                                 <button className="w-full bg-rose-800 hover:bg-rose-700 rounded-xl py-3 text-white font-black" disabled={loading} onClick={() => {setState((prev : boolean) => !prev)}} >Cancel</button>
                            </div>
                         </div>

@@ -1,4 +1,6 @@
-export const PasswordModal = ({ action, currentPasword, newPassword, setState, handleClick, loading, setCurrentPassword, setNewPassword } : any) => {
+import { PasswordModalInterface } from "../../models/definition"
+
+export const PasswordModal = ({ action, currentPassword, newPassword, setState, handleClick, loading, setCurrentPassword, setNewPassword } : PasswordModalInterface) => {
     return(
         <>
             <div className="backdrop-brightness-50 h-screen absolute inset-0 flex items-center justify-center">
@@ -12,10 +14,10 @@ export const PasswordModal = ({ action, currentPasword, newPassword, setState, h
                         </button>
                         <div className="p-4 md:p-5 text-center grid gap-5">
                            <h1 className="text-white font-black text-2xl">{action}</h1>
-                            <input type="password" value={currentPasword} onChange={(e) => setCurrentPassword(e.target.value)} className="rounded-xl py-3 px-2 w-full" placeholder="Current Password" />
+                            <input type="password" value={currentPassword} onChange={(e) => setCurrentPassword(e.target.value)} className="rounded-xl py-3 px-2 w-full" placeholder="Current Password" />
                             <input type="password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} className="rounded-xl py-3 px-2 w-full" placeholder="New Password" />
                            <div className="grid gap-4">
-                                <button className="w-full bg-amber-100 hover:bg-amber-200 rounded-xl py-3 font-black" disabled={loading} onClick={handleClick}>Update</button>
+                                <button className="w-full bg-amber-100 hover:bg-amber-200 rounded-xl py-3 font-black" disabled={loading} onClick={() => handleClick()}>Update</button>
                                 <button className="w-full bg-rose-800 hover:bg-rose-700 rounded-xl py-3 text-white font-black" disabled={loading} onClick={() => {setState((prev : boolean) => !prev)}} >Cancel</button>
                            </div>
                         </div>

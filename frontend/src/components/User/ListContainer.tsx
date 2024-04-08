@@ -12,7 +12,6 @@ export const ListContainer = () => {
     const [viewAll, setViewAll] = useState(false);
 
     const addTodo = async () => {
-        toast.dismiss();
         if (!input) return toast("Put a title", { toastId: 1})
         try {
             await instance.post("/api/addTodo", { title: input});
