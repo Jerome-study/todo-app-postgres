@@ -14,32 +14,40 @@ CREATE TABLE IF NOT EXISTS todos(
   FOREIGN KEY (user_id) REFERENCES "user"(id)
 );
 `
-const getUser = (id) => {
-  return `SELECT username, created_at FROM "user" WHERE id = '${id}'`
+const getTodos = `SELECT * FROM todos WHERE user_id = $1 ORDER BY created_At`;
+
+const addTodo = `INSERT INTO todos (title, user_id) VALUES($1, $2)`;
+
+const updateTodo = `UPDATE todos SET title = $1 WHERE id = $2 AND user_id = $3`;
+
+const deleteTodo = `DELETE FROM todos WHERE id = $1 AND user_id = $2`;
+
+const deleteAllUserTodos = `DELETE FROM todos WHERE user_id = $1`;
+
+const getUser = `SELECT username, created_at FROM "user" WHERE id = $1`;
+
+const getPassword = `SELECT password FROM "user" WHERE id = $1`
+
+const usernameExist = `SELECT username FROM "user" WHERE username = $1`;
+
+const updatePassword = `UPDATE "user" SET password =$1 WHERE id = $2`;
+
+const updateUser = `UPDATE "user" SET username = $1 WHERE id = $2`;
+
+const deleteUser = `DELETE FROM "user" WHERE id = $1`;
+
+module.exports = { 
+  createUserTable, 
+  createTodsTable, 
+  getTodos, 
+  addTodo, 
+  updateTodo, 
+  deleteTodo, 
+  deleteAllUserTodos, 
+  getUser,
+  getPassword,
+  usernameExist, 
+  updatePassword,
+  updateUser,
+  deleteUser 
 };
-
-const getTodos = (id) => {
-  return `SELECT * FROM todos WHERE user_id = '${id}' ORDER BY created_At`
-};
-
-const addTodo = (title, user_id) => {
-  return `INSERT INTO todos (title, user_id) VALUES('${title}', '${user_id}')`
-};
-
-const updateTodo = (todo_id, edited_title, user_id) => {
-  return `UPDATE todos SET title = '${edited_title}' WHERE id = '${todo_id}' AND user_id = '${user_id}'`
-};
-
-const deleteTodo = (todo_id, user_id) => {
-  return `DELETE FROM todos WHERE id = '${todo_id}' AND user_id = '${user_id}'`
-};
-
-const deleteAllUserTodos = (user_id) => {
-  return `DELETE FROM todos WHERE user_id = '${user_id}'`
-}
-
-const deleteUser = (id) => {
-  return `DELETE FROM "user" WHERE id = '${id}'`
-}
-
-module.exports = { createUserTable, createTodsTable, getTodos, addTodo, updateTodo, deleteTodo, getUser, deleteAllUserTodos, deleteUser };
