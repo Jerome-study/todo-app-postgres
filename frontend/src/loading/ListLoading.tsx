@@ -1,8 +1,29 @@
 export const ListLoading = () => {
     return(
         <>
-            <div className="w-full h-20 bg-slate-950 flex justify-center items-center">
-                <div className="rounded-md h-12 w-12 border-4 border-t-4 border-blue-500 animate-spin absolute"></div>
+            <div className="mt-12 bg-slate-900  shadow rounded-xl px-4 py-7  w-full mx-auto">
+                <div className="animate-pulse flex space-x-4 justify-between">
+                    <div className="h-5 bg-slate-500 w-36 rounded-lg">
+                    </div>
+                    <div className="h-5 bg-slate-500 w-40 rounded-lg">
+                    </div>
+                </div>
+            </div>
+            <div className="mt-12 bg-slate-900  shadow rounded-xl px-4 py-7  w-full mx-auto">
+                <div className="animate-pulse flex space-x-4 justify-between">
+                    <div className="h-5 bg-slate-500 w-36 rounded-lg">
+                    </div>
+                    <div className="h-5 bg-slate-500 w-40 rounded-lg">
+                    </div>
+                </div>
+            </div>
+            <div className="mt-12 bg-slate-900  shadow rounded-xl px-4 py-7  w-full mx-auto">
+                <div className="animate-pulse flex space-x-4 justify-between">
+                    <div className="h-5 bg-slate-500 w-36 rounded-lg">
+                    </div>
+                    <div className="h-5 bg-slate-500 w-40 rounded-lg">
+                    </div>
+                </div>
             </div>
         </>
     )

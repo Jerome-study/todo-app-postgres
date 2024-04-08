@@ -16,10 +16,8 @@ export const useFetch = (url: string) => {
             try {
                 const response = await instance.get(url);
                 if (running) {
-                    setTimeout(() => {
-                        setData(response.data);
+                    setData(response.data);
                     setLoading(false)
-                    }, 500)
                 }   
             } catch(error) {
                 setError(error);
@@ -41,7 +39,6 @@ export const useFetch = (url: string) => {
                 const response = await instance.get(url);
                 setData(response.data);
                 setLoading(false)
-                
             } catch(error) {
                 setError(error);
                 setLoading(false)
