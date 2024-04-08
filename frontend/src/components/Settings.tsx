@@ -41,7 +41,7 @@ export const SettingsComponent = () => {
                     <button onClick={() => setDeleteAccountModal(prev => !prev)} className="rounded-xl lg:col-span-6 bg-rose-800 hover:bg-rose-700 cursor-pointer py-5 px-3 text-center text-white text-xl font-black ">Delete Account</button>
                 </div>
             </div>    
-            {logoutModal && <Modal action={"logout"} setState={setLogoutModal} handleClick={logout} />}   
+            {logoutModal && <Modal action={"logout"} loading={true} setState={setLogoutModal} handleClick={logout} />}   
             {deleteAccountModal && <Modal action={"delete"} setState={setDeleteAccountModal} handleClick={deleteUser} loading={loading} /> }     
         </div>
         
