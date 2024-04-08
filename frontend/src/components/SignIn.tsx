@@ -16,13 +16,11 @@ export const SignInComponent = () => {
         setLoading(true)
         try {
             const response = await instance.post("/auth/login", {...data});
-            console.log(response)
-            if (response.statusText === "OK") navigate("/user");
+            setLoading(false);
+            if (response.statusText === "OK" || response) return navigate("/user");
         } catch(error : any) {
-            console.log(error)
             notify(error?.response.data.message);
-        } finally {
-            setLoading(false)
+            setLoading(false);
         }
     };
 
