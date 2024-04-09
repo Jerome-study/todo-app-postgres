@@ -7,7 +7,7 @@ This is been deployed on a free hosting service!
 
 # Images (Desktop Design)
 
-<div>
+<div align="center">
   <div style="display: flex;">
     
 <img width="450" height="200" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/8cae7a35-0305-4326-a062-e258794e6b41" style="vertical-align: top;" />
