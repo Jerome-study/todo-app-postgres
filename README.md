@@ -28,9 +28,9 @@ This is been deployed on a free hosting service!
 <div align="center">
   <div style="display: flex;">
     
-<img width="150" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/cd0941d5-b1d6-426a-ae4c-6361c735b452" style="vertical-align: top;" />
-<img width="150" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/c2535a01-3897-4e51-8b4f-2cfd793f2259" style="vertical-align: top;" />
-<img width="150" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/3e4774ad-3828-4b3f-9c89-11782cd43fb5" style="vertical-align: top;" />
+<img width="200" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/cd0941d5-b1d6-426a-ae4c-6361c735b452" style="vertical-align: top;" />
+<img width="200" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/c2535a01-3897-4e51-8b4f-2cfd793f2259" style="vertical-align: top;" />
+<img width="200" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/3e4774ad-3828-4b3f-9c89-11782cd43fb5" style="vertical-align: top;" />
 
   </div>
 </div>
