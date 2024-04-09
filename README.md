@@ -7,16 +7,16 @@ This is been deployed on a free hosting service!
 
 # Images (Desktop Design)
 
-<div>
+<div align="center">
   <div style="display: flex;">
     
-<img width="500" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/8cae7a35-0305-4326-a062-e258794e6b41" style="vertical-align: top;" />
-<img width="500" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/5dd0c933-6298-4821-8c3a-b2aa3638d0f1" style="vertical-align: top;" />
-<img width="500" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/50068842-59c0-41db-9a91-dddf2288fe03" style="vertical-align: top;" />
-<img width="500" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/0b51e9b4-b01e-402c-9805-0b41ba18827b" style="vertical-align: top;" />
-<img width="500" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/c40d5068-f12a-45a4-a0c1-e850d8f85bc6" style="vertical-align: top;" />
-<img width="500" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/6e96532c-c9dd-4c10-b73f-b9d1e348ff4b" style="vertical-align: top;" />
-<img width="500" height="350" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/28343a2f-e977-49ca-bdea-e3700fa95e04" style="vertical-align: top;" />
+<img width="550" height="300" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/8cae7a35-0305-4326-a062-e258794e6b41" style="vertical-align: top;" />
+<img width="550" height="300" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/5dd0c933-6298-4821-8c3a-b2aa3638d0f1" style="vertical-align: top;" />
+<img width="550" height="300" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/50068842-59c0-41db-9a91-dddf2288fe03" style="vertical-align: top;" />
+<img width="550" height="300" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/0b51e9b4-b01e-402c-9805-0b41ba18827b" style="vertical-align: top;" />
+<img width="550" height="300"" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/c40d5068-f12a-45a4-a0c1-e850d8f85bc6" style="vertical-align: top;" />
+<img width="550" height="300" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/6e96532c-c9dd-4c10-b73f-b9d1e348ff4b" style="vertical-align: top;" />
+<img width="550" height="300" src="https://github.com/Jerome-study/todo-app-postgres/assets/119875460/28343a2f-e977-49ca-bdea-e3700fa95e04" style="vertical-align: top;" />
   </div>
 </div>
 
